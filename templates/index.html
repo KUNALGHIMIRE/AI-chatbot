@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI Chatbot</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="login-container" id="loginBox">
+    <h2>Login</h2>
+    <input type="text" id="username" placeholder="Username" required><br>
+    <input type="password" id="password" placeholder="Password" required><br>
+    <button type="button" id="loginBtn">Login</button>
+    <p id="error"></p>
+</div>
+
+<div class="chat-container" id="chatBox" style="display:none;">
+    <div class="chat-header">AI Chatbot</div>
+    <div id="chatbox"></div>
+    <div class="chat-input">
+        <input type="text" id="userInput" placeholder="Type your message...">
+        <button id="sendBtn">Send</button>
+    </div>
+</div>
+
+<script>
+const loginBox = document.getElementById("loginBox");
+const chatBox = document.getElementById("chatBox");
+const error = document.getElementById("error");
+
+const usernameInput = document.getElementById("username");
+const passwordInput = document.getElementById("password");
+const loginBtn = document.getElementById("loginBtn");
+
+const chatbox = document.getElementById("chatbox");
+const userInput = document.getElementById("userInput");
+const sendBtn = document.getElementById("sendBtn");
+
+// Login function
+function loginFunction(){
+    const username = usernameInput.value;
+    const password = passwordInput.value;
+
+    fetch("/login", {
+        method: "POST",
+        headers: {"Content-Type": "application/json"},
+        body: JSON.stringify({username, password})
+    }).then(r => r.json())
+      .then(data => {
+        if(data.success){
+            loginBox.style.display = "none";
+            chatBox.style.display = "flex";
+        } else {
+            error.textContent = data.message;
+        }
+    });
+}
+
+// Login button click
+loginBtn.onclick = loginFunction;
+
+// Prevent Enter from refreshing page
+usernameInput.addEventListener("keypress", e => { if(e.key==="Enter"){ e.preventDefault(); loginFunction(); } });
+passwordInput.addEventListener("keypress", e => { if(e.key==="Enter"){ e.preventDefault(); loginFunction(); } });
+
+// Chat functions
+function appendMessage(sender,msg,typing=false){
+    const div = document.createElement("div");
+    div.className = "message " + sender;
+    chatbox.appendChild(div);
+    if(typing){
+        let i=0;
+        const interval = setInterval(()=>{
+            if(i<msg.length){
+                div.textContent += msg[i];
+                i++;
+                chatbox.scrollTop = chatbox.scrollHeight;
+            } else clearInterval(interval);
+        },20);
+    } else {
+        div.textContent = msg;
+    }
+    chatbox.scrollTop = chatbox.scrollHeight;
+}
+
+function sendMessage(msg){
+    if(!msg.trim()) return;
+    appendMessage("user",msg);
+    userInput.value = "";
+
+    const typingDiv = document.createElement("div");
+    typingDiv.className = "typing bot";
+    typingDiv.textContent = "Bot is typing...";
+    chatbox.appendChild(typingDiv);
+
+    fetch("/get_response",{
+        method:"POST",
+        headers:{"Content-Type":"application/json"},
+        body: JSON.stringify({message:msg})
+    }).then(r=>r.json()).then(data=>{
+        chatbox.removeChild(typingDiv);
+        appendMessage("bot",data.response,true);
+    });
+}
+
+sendBtn.onclick = ()=>sendMessage(userInput.value);
+userInput.addEventListener("keypress", e=>{ if(e.key==="Enter") sendMessage(userInput.value); });
+
+</script>
+</body>
+</html>
