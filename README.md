@@ -1,18 +1,18 @@
-🤖 AI Chatbot – Internship Project
-A real-time AI-powered chatbot developed using Python and Flask. This project demonstrates practical skills in Natural Language Processing (NLP), REST API development, and frontend–backend integration. The chatbot processes user input and generates intelligent, human-like responses through a simple web interface.
+🤖 AI Chatbot
+
+A real-time AI-powered chatbot developed using Python and Flask.
+This project demonstrates practical skills in Natural Language Processing (NLP), REST API development, and frontend–backend integration.
+The chatbot processes user input and generates intelligent, human-like responses through a simple web interface.
 
 📌 Project Overview
+
 Designed and implemented a Flask-based backend for handling chat requests
-
 Built a responsive web interface for real-time user interaction
-
 Integrated a custom-trained NLP model for generating responses
-
-Followed modular and clean project structure suitable for real-world deployment
-
+Followed a modular and clean project structure suitable for real-world deployment
 This project was developed as part of hands-on learning in AI and web-based systems and is suitable for AI / ML / Software Engineering internships.
 
-📁 Project Structure:-
+📁 Project Structure
 AI-Chatbot/
 ├── static/
 │   └── style.css          # Styling for chatbot interface
@@ -22,7 +22,8 @@ AI-Chatbot/
 ├── Screenshot.png         # Application output screenshot
 └── README.md              # Project documentation
 
-Key Features:-
+🚀 Key Features
+
 Real-time chatbot interaction
 Custom-trained NLP-based response system
 RESTful Flask backend
@@ -30,7 +31,9 @@ Clean and minimal frontend design
 Easy to extend with advanced AI models
 
 🛠️ Technologies Used
+
 Programming Language: Python 3.x
 Backend Framework: Flask
 Frontend: HTML, CSS
 AI / NLP: NLTK / SpaCy / Transformers
+
