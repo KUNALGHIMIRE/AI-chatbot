@@ -13,7 +13,7 @@ Followed a modular and clean project structure suitable for real-world deploymen
 This project was developed as part of hands-on learning in AI and web-based systems and is suitable for AI / ML / Software Engineering internships.
 
 **📁 Project Structure**
-<pre>
+
 AI-Chatbot/
 ├── static/
 │   └── style.css          # Styling for chatbot interface
@@ -22,7 +22,7 @@ AI-Chatbot/
 ├── chatbot.py             # Flask app and chatbot logic
 ├── Screenshot.png         # Application output screenshot
 └── README.md              # Project documentation
-</pre>
+
 
 **Key Features**
 - Real-time chatbot interaction
