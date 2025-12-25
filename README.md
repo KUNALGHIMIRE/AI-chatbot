@@ -25,17 +25,16 @@ AI-Chatbot/
 </pre>
 
 **Key Features**
+- Real-time chatbot interaction
+- Custom-trained NLP-based response system
+- RESTful Flask backend
+- Clean and minimal frontend design
+- Easy to extend with advanced AI models
 
--Real-time chatbot interaction
--Custom-trained NLP-based response system
--RESTful Flask backend
--Clean and minimal frontend design
--Easy to extend with advanced AI models
 
 
 
 **Technologies Used**
-
 -Programming Language: Python 3.x
 -Backend Framework: Flask
 -Frontend: HTML, CSS
