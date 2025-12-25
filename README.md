@@ -32,8 +32,9 @@ AI-Chatbot/
 - Easy to extend with advanced AI models
 
 **Technologies Used**
--Programming Language: Python 3.x
--Backend Framework: Flask
--Frontend: HTML, CSS
--AI / NLP: NLTK / SpaCy / Transformers
+- Programming Language: Python 3.x
+- Backend Framework: Flask
+- Frontend: HTML, CSS
+- AI / NLP: NLTK, SpaCy, Transformers
+
 
