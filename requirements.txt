@@ -1,7 +1,4 @@
-gradio
-sentence-transformers
-torch
-numpy
-scikit-learn
-pandas
-flask
+flask==2.3.3
+sentence-transformers==2.2.2
+torch==2.1.0
+gunicorn==21.2.0
