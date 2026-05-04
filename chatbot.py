@@ -122,7 +122,7 @@ os.environ['TOKENIZERS_PARALLELISM'] = 'false'
 
 # Load pre-trained model
 print("Loading AI model...")
-model = SentenceTransformer('all-MiniLM-L6-v2')
+model = SentenceTransformer('paraphrase-MiniLM-L3-v2')
 print("Model loaded successfully!")
 
 # FAQ data as dictionary
