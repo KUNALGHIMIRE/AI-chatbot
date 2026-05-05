@@ -28,6 +28,8 @@ The AI Chatbot follows a simple client-server architecture with an integrated NL
 
 Architecture: Monolithic Flask-based chatbot with integrated NLP pipeline
 
+This system is designed as a lightweight monolithic AI application with an integrated NLP pipeline for real-time response generation.
+
 
 **System Flow**
 
