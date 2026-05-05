@@ -15,24 +15,6 @@ Integrated a custom-trained NLP model for generating responses
 Followed a modular and clean project structure suitable for real-world deployment
 This project was developed as part of hands-on learning in AI and web-based systems and is suitable for AI / ML / Software Engineering internships.
 
-**📁 Project Structure**
-
-```AI-Chatbot/
-├── static/
-│   └── style.css          # Styling for chatbot interface
-├── templates/
-│   └── index.html         # Frontend UI
-├── chatbot.py             # Flask app and chatbot logic
-├── Screenshot.png         # Application output screenshot
-└── README.md              # Project documentation
-```
-
-**Technologies Used**
-
-- Programming Language: Python 3.x
-- Backend Framework: Flask
-- Frontend: HTML, CSS
-- AI / NLP: NLTK, SpaCy, Transformers
 
 **System Design**
 
@@ -53,17 +35,60 @@ The AI Chatbot follows a simple client-server architecture with an integrated NL
 6. Flask sends JSON response back to frontend
 7. UI dynamically updates with chatbot reply in real-time
 
+**API DESIGN**
+
+POST /chat
+
+Request:
+{
+  "message": "Hello"
+}
+
+Response:
+{
+  "reply": "Hi! How can I help you?"
+}
+
+**NLP PIPELINE**
+
+1. Text preprocessing (tokenization, cleaning)
+2. Feature extraction (TF-IDF / embeddings)
+3. Intent detection / similarity matching
+4. Response generation
+
+**Key Features**
+
+- Real-time chatbot interaction  
+- NLP-based response generation  
+- RESTful API backend  
+- Simple and responsive UI
+
+**Technologies Used**
+
+- Programming Language: Python 3.x
+- Backend Framework: Flask
+- Frontend: HTML, CSS
+- AI / NLP: NLTK, SpaCy, Transformers
+
+**📁 Project Structure**
+
+```AI-Chatbot/
+├── static/
+│   └── style.css          # Styling for chatbot interface
+├── templates/
+│   └── index.html         # Frontend UI
+├── chatbot.py             # Flask app and chatbot logic
+├── Screenshot.png         # Application output screenshot
+└── README.md              # Project documentation
+```
+
+
 **Key Design Highlights**
 
-Lightweight monolithic Flask architecture (easy to deploy)
-
-RESTful communication between frontend and backend
-
-Modular chatbot logic for easy AI model upgrades
-
-Real-time request-response interaction
-
-Designed for scalability (can integrate advanced LLMs later)\
+- Monolithic Flask architecture  
+- REST API communication  
+- Integrated NLP pipeline  
+- Real-time interaction
 
 **OUTPUT**
 
