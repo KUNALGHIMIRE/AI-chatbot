@@ -25,15 +25,6 @@ AI-Chatbot/
 ├── chatbot.py             # Flask app and chatbot logic
 ├── Screenshot.png         # Application output screenshot
 └── README.md              # Project documentation
-```
-
-**Key Features**
-- Real-time chatbot interaction
-- Custom-trained NLP-based response system
-- RESTFUL Flask backend
-- Clean and minimal frontend design
-- Easy to extend with advanced AI models
-
 **Technologies Used**
 - Programming Language: Python 3.x
 - Backend Framework: Flask
