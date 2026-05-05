@@ -17,6 +17,7 @@ This project was developed as part of hands-on learning in AI and web-based syst
 
 **📁 Project Structure**
 
+
 AI-Chatbot/
 ├── static/
 │   └── style.css          # Styling for chatbot interface
