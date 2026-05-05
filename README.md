@@ -25,6 +25,7 @@ This project was developed as part of hands-on learning in AI and web-based syst
 Architecture Overview
 
 The AI Chatbot follows a simple client-server architecture with an integrated NLP processing layer.
+
 This system is designed as a lightweight monolithic AI application with an integrated NLP pipeline for real-time response generation.
 
 
