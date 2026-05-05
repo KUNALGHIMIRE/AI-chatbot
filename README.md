@@ -40,4 +40,42 @@ AI-Chatbot/
 - Frontend: HTML, CSS
 - AI / NLP: NLTK, SpaCy, Transformers
 
+**System Design**
 
+Architecture Overview
+
+The AI Chatbot follows a simple client-server architecture with an integrated NLP processing layer.
+
+User (Browser)
+      ↓
+Frontend
+      ↓
+Flask REST API 
+      ↓
+NLP Processing Engine
+      ↓
+Response Generator
+      ↓
+Frontend UI
+
+**System Flow**
+
+1. User types a message in the chatbot UI
+2. Frontend sends the input to Flask backend via HTTP request
+3. Flask processes the request and forwards it to chatbot logic
+4. NLP engine analyzes input and generates a response
+5. Response is returned to Flask server
+6. Flask sends JSON response back to frontend
+7. UI dynamically updates with chatbot reply in real-time
+
+**Key Design Highlights**
+
+Lightweight monolithic Flask architecture (easy to deploy)
+
+RESTful communication between frontend and backend
+
+Modular chatbot logic for easy AI model upgrades
+
+Real-time request-response interaction
+
+Designed for scalability (can integrate advanced LLMs later)
