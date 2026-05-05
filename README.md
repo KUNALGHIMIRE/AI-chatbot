@@ -46,22 +46,8 @@ Architecture Overview
 
 The AI Chatbot follows a simple client-server architecture with an integrated NLP processing layer.
 
-User (Browser)
-      ↓
-      
-Frontend
-      ↓
-      
-Flask REST API 
-      ↓
-      
-NLP Processing Engine
-      ↓
-      
-Response Generator
-      ↓
-      
-Frontend UI
+<img width="951" height="331" alt="image" src="https://github.com/user-attachments/assets/37ba5fee-0442-46f1-99d3-ca37b5d6e469" />
+
 
 **System Flow**
 
