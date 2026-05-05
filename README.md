@@ -48,14 +48,19 @@ The AI Chatbot follows a simple client-server architecture with an integrated NL
 
 User (Browser)
       ↓
+      
 Frontend
       ↓
+      
 Flask REST API 
       ↓
+      
 NLP Processing Engine
       ↓
+      
 Response Generator
       ↓
+      
 Frontend UI
 
 **System Flow**
