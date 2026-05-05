@@ -25,6 +25,8 @@ AI-Chatbot/
 ├── chatbot.py             # Flask app and chatbot logic
 ├── Screenshot.png         # Application output screenshot
 └── README.md              # Project documentation
+
+
 **Technologies Used**
 - Programming Language: Python 3.x
 - Backend Framework: Flask
