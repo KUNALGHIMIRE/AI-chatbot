@@ -1,4 +1,4 @@
-**AI Chatbot**
+**Hostel Support AI Assistant**
 
 A real-time AI-powered chatbot developed using Python and Flask.
 This project demonstrates practical skills in Natural Language Processing (NLP), REST API development, and frontend–backend integration.
