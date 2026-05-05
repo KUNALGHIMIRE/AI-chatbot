@@ -69,4 +69,9 @@ Modular chatbot logic for easy AI model upgrades
 
 Real-time request-response interaction
 
-Designed for scalability (can integrate advanced LLMs later)
+Designed for scalability (can integrate advanced LLMs later)\
+
+**OUTPUT**
+
+<img width="351" height="487" alt="image" src="https://github.com/user-attachments/assets/2b339d61-9a5b-4e0f-9a07-39fbdac1ce75" />
+
